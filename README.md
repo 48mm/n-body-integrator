@@ -4,7 +4,8 @@ Numerical integration of the gravitational N-body problem, comparing the
 **forward Euler**, **semi-implicit Euler-Cromer**, and **fourth-order
 Runge-Kutta (RK4)** methods. This code produces the figures and tables in the
 accompanying report *"Comparative Analysis of Numerical Integration Methods for
-Solar System N-Body Simulations."*
+Solar System N-Body Simulations."* Schemes validated against NASA's JPL Ephemerides
+alongside Lyapunov exponent calculation to analyse how the systems evolve.
 
 **NOTE**: Report is available on request.
 
@@ -80,11 +81,11 @@ traj = system.simulate("rk4", dt=3600, n_steps=8760)
 
 ## Notes on the methods
 
-* **Euler** - first order, not symplectic; energy drifts and orbits decay.
-* **Euler-Cromer** - first order but symplectic; energy error stays *bounded*,
-  and it conserves linear and angular momentum to machine precision.
-* **RK4** - fourth order; far more accurate short-term, ~4.5x the cost per step,
-  but not symplectic (slow long-term energy drift).
+* **Euler** - first order; not symplectic so energy drifts and orbits decay.
+* **Euler-Cromer** - first order but symplectic, thus energy error stays *bounded*,
+  and it conserves linear and angular momentum much more precisely.
+* **RK4** - fourth order, thus far more accurate short-term. ~4.5x the cost per step,
+  but not symplectic causing slow long-term energy drift.
 
 The acceleration is evaluated as a single vectorised pairwise sum shared by all
 three integrators, so all methods and all system sizes use the same routine.
