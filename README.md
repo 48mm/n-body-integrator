@@ -2,9 +2,8 @@
 
 Numerical integration of the gravitational N-body problem, comparing the
 **forward Euler**, **semi-implicit Euler-Cromer**, and **fourth-order
-Runge-Kutta (RK4)** methods. This code produces the figures and tables in the
-accompanying report *"Comparative Analysis of Numerical Integration Methods for
-Solar System N-Body Simulations."* Schemes validated against NASA's JPL Ephemerides
+Runge-Kutta (RK4)** methods. This code produces the figures and tables in an
+accompanying report. Schemes validated against NASA's JPL Ephemerides
 alongside Lyapunov exponent calculation to analyse how the systems evolve.
 
 **NOTE**: Report is available on request.
