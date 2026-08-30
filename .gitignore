@@ -1,0 +1,18 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Generated outputs (regenerate with: python main.py all)
+results/
+
+# Downloaded JPL Horizons cache (remove this line to commit it for offline reproducibility)
+cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
