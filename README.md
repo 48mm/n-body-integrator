@@ -82,7 +82,7 @@ traj = system.simulate("rk4", dt=3600, n_steps=8760)
 ## Notes on the methods
 
 * **Euler** - first order; not symplectic so energy drifts and orbits decay.
-* **Euler-Cromer** - first order but symplectic, thus energy error stays *bounded*,
+* **Euler-Cromer** - first order but symplectic, thus energy error stays bounded,
   and it conserves linear and angular momentum much more precisely.
 * **RK4** - fourth order, thus far more accurate short-term. ~4.5x the cost per step,
   but not symplectic causing slow long-term energy drift.
